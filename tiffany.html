@@ -34,6 +34,55 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <style>
+        .button {
+            border: 1px solid #FF416C;
+            display: inline-block;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #FF416C;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            background-color: transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .btn-cupom:hover {
+            background-color: #8459B4;
+            border-color: #8459B4;
+            color: white;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .active-cupom {
+            background-color: #8459B4;
+            border-color: #8459B4;
+            color: white;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-oferta:hover {
+            background-color: #379C00;
+            border-color: #379C00;
+            color: white;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .active-oferta {
+            background-color: #379C00;
+            border-color: #379C00;
+            color: white;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .div-side {
+            align-self: start;
+        }
+
         .checked {
             color: orange;
         }
@@ -160,20 +209,20 @@
             margin-bottom: 10px;
             min-height: 75px;
         }
-
-        .smallTitle.is-offer {
-            color: #FF416C;
-        }
-
         .smallTitle-content {
             font-size: 24px;
             letter-spacing: -1px;
-            color: inherit;
             font-weight: 700;
             line-height: 1em;
             word-spacing: 100vw;
         }
 
+        .is-offer {
+            color:#379C00;
+        }
+        .is-cupom {
+            color:#8459B4;
+        }
         .item {
             padding: 25px 20px;
             border-spacing: 0;
@@ -328,34 +377,141 @@
 
         <!-- Category Start -->
         <div class="container-xxl py-5">
+
             <div class="container">
+
                 <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
                     <div class="col-md-10 p-5 mt-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <li class="item row">
-                            <div class="col-md-10">
-                                <div class="smallTitle is-offer  ">
-                                    <span class="smallTitle-content js-couponSmallText">30% OFF </span>
-                                </div>
-                                <div class="item-title">
-                                    <h3>Desconto Progressivo: Economize até 30% em suas compras </h3>
-                                    <div class="item-desc">Leve 2 itens e garanta 20% OFF/ Leve 3 itens e garanta 30%
-                                        OFF.
-                                        Confira seleção no link e aproveite! </div>
-                                </div>
+                        <div class="mb-3">
+                            <div class="d-flex gap-3">
+                                <button type="button" class="button btn-oferta promo-button oferta">Ofertas</button>
+                                <button type="button" class="button btn-cupom promo-button cupom">Cupons</button>
                             </div>
-                            <button class="button-3 col-md-2" role="button"
-                                title="Clique para abrir ver o desconto no site">Ver Desconto</button>
-
-                            <!-- <button class="col-md-2 border-0" >
-                                <span class=""></span>
-                            </button> -->
-                        </li>
+                        </div>
+                        <div class="promo">
+                            <li class="item row mb-4">
+                                <div class="col-md-10">
+                                    <div class="smallTitle is-offer  ">
+                                        <span class="smallTitle-content js-couponSmallText">30% OFF </span>
+                                    </div>
+                                    <div class="item-title">
+                                        <h3>Desconto Progressivo: Economize até 30% em suas compras </h3>
+                                        <div class="item-desc">Leve 2 itens e garanta 20% OFF/ Leve 3 itens e garanta
+                                            30%
+                                            OFF.
+                                            Confira seleção no link e aproveite! </div>
+                                    </div>
+                                </div>
+                                <button class="button-3 col-md-2" role="button"
+                                    title="Clique para abrir ver o desconto no site">Ver Desconto</button>
+                                <!-- <button class="col-md-2 border-0" >
+                                    <span class=""></span>
+                                </button> -->
+                            </li>
+                            <li class="item row mb-4">
+                                <div class="col-md-10">
+                                    <div class="smallTitle is-offer  ">
+                                        <span class="smallTitle-content js-couponSmallText">30% OFF </span>
+                                    </div>
+                                    <div class="item-title">
+                                        <h3>Desconto Progressivo: Economize até 30% em suas compras </h3>
+                                        <div class="item-desc">Leve 2 itens e garanta 20% OFF/ Leve 3 itens e garanta
+                                            30%
+                                            OFF.
+                                            Confira seleção no link e aproveite! </div>
+                                    </div>
+                                </div>
+                                <button class="button-3 col-md-2" role="button"
+                                    title="Clique para abrir ver o desconto no site">Ver Desconto</button>
+                                <!-- <button class="col-md-2 border-0" >
+                                    <span class=""></span>
+                                </button> -->
+                            </li>
+                            <li class="item row mb-4">
+                                <div class="col-md-10">
+                                    <div class="smallTitle is-offer  ">
+                                        <span class="smallTitle-content js-couponSmallText">30% OFF </span>
+                                    </div>
+                                    <div class="item-title">
+                                        <h3>Desconto Progressivo: Economize até 30% em suas compras </h3>
+                                        <div class="item-desc">Leve 2 itens e garanta 20% OFF/ Leve 3 itens e garanta
+                                            30%
+                                            OFF.
+                                            Confira seleção no link e aproveite! </div>
+                                    </div>
+                                </div>
+                                <button class="button-3 col-md-2" role="button"
+                                    title="Clique para abrir ver o desconto no site">Ver Desconto</button>
+                                <!-- <button class="col-md-2 border-0" >
+                                    <span class=""></span>
+                                </button> -->
+                            </li>
+                        </div>
+                        <div class="cash">
+                            <li class="item row mb-4">
+                                <div class="col-md-10">
+                                    <div class="smallTitle is-cupom  ">
+                                        <span class="smallTitle-content js-couponSmallText">30% OFF </span>
+                                    </div>
+                                    <div class="item-title">
+                                        <h3>Desconto Progressivo: Economize até 30% em suas compras </h3>
+                                        <div class="item-desc">Leve 2 itens e garanta 20% OFF/ Leve 3 itens e garanta
+                                            30%
+                                            OFF.
+                                            Confira seleção no link e aproveite! </div>
+                                    </div>
+                                </div>
+                                <button class="button-3 col-md-2" role="button"
+                                    title="Clique para abrir ver o desconto no site">Ver Desconto</button>
+                                <!-- <button class="col-md-2 border-0" >
+                                    <span class=""></span>
+                                </button> -->
+                            </li>
+                            <li class="item row mb-4">
+                                <div class="col-md-10">
+                                    <div class="smallTitle is-cupom  ">
+                                        <span class="smallTitle-content js-couponSmallText">30% OFF </span>
+                                    </div>
+                                    <div class="item-title">
+                                        <h3>Desconto Progressivo: Economize até 30% em suas compras </h3>
+                                        <div class="item-desc">Leve 2 itens e garanta 20% OFF/ Leve 3 itens e garanta
+                                            30%
+                                            OFF.
+                                            Confira seleção no link e aproveite! </div>
+                                    </div>
+                                </div>
+                                <button class="button-3 col-md-2" role="button"
+                                    title="Clique para abrir ver o desconto no site">Ver Desconto</button>
+                                <!-- <button class="col-md-2 border-0" >
+                                    <span class=""></span>
+                                </button> -->
+                            </li>
+                            <li class="item row mb-4">
+                                <div class="col-md-10">
+                                    <div class="smallTitle is-cupom  ">
+                                        <span class="smallTitle-content js-couponSmallText">30% OFF </span>
+                                    </div>
+                                    <div class="item-title">
+                                        <h3>Desconto Progressivo: Economize até 30% em suas compras </h3>
+                                        <div class="item-desc">Leve 2 itens e garanta 20% OFF/ Leve 3 itens e garanta
+                                            30%
+                                            OFF.
+                                            Confira seleção no link e aproveite! </div>
+                                    </div>
+                                </div>
+                                <button class="button-3 col-md-2" role="button"
+                                    title="Clique para abrir ver o desconto no site">Ver Desconto</button>
+                                <!-- <button class="col-md-2 border-0" >
+                                    <span class=""></span>
+                                </button> -->
+                            </li>
+                        </div>
                     </div>
-                    <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="div-side col-lg-2 col-sm-6 pt-5 mt-lg-5 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="side store-desc">
                             <h6 class="side-title">Precisa de ajuda?</h6>
                             <ul class="store-info">
-                                <li><a class="side-help-link" href="">Como usar cupom</a></li>
+                                <li><a class="side-help-link" href="">Como usar o cupom</a></li>
                                 <li><a class="side-help-link" href="">Tiffany é confiável?</a></li>
                                 <li><a class="side-help-link" href="">Redes sociais da Tiffany</a></li>
                             </ul>
@@ -372,7 +528,7 @@
                                 </div>
                                 <b>4/5</b>
                             </div>
-                            
+
                         </div>
                     </div>
 

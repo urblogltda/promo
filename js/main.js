@@ -79,3 +79,32 @@
     
 })(jQuery);
 
+$('.promo-button').click(function (e) { 
+    if ($(this).hasClass('cupom')) {
+        $('.oferta').removeClass('active-oferta');
+        if ($(this).hasClass('active-cupom')) {
+            $('.promo').show();
+            $('.cupom').removeClass('active-cupom');
+        }else{
+            $(this).addClass('active-cupom');
+            $('.promo').hide();
+            $('.cash').show()
+        }
+        
+        
+    }
+    if ($(this).hasClass('oferta')) {
+        $('.cupom').removeClass('active-cupom');
+        if ($(this).hasClass('active-oferta')) {
+            $('.cash').show();
+            $('.oferta').removeClass('active-oferta');
+        }else{
+            $(this).addClass('active-oferta');
+            $('.cash').hide();
+            $('.promo').show()
+        }
+    }
+	
+	
+});
+

@@ -13,5 +13,5 @@
               host: ${{ secrets.HOST }} 
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASS }}
-              localDir: ""
-              remoteDir: "dist/public_html/promo"
+              localDir: "/public_html/promo"
+              remoteDir: "/public_html/promo"
